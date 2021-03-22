@@ -25,7 +25,7 @@ public class RHTest {
 		rh.contrata(new Funcionario(0, "Maria", 10.00));
 		rh.contrata(new Funcionario(0, "João", 25.25));
 		rh.contrata(new Funcionario(0, "Mariana", 50.50));
-		assertEquals(85.75, rh.calculaMedia(), DELTA);
+		assertEquals(28.58333333, rh.calculaMedia(), DELTA);
 	}
 
 	@Test
@@ -33,7 +33,7 @@ public class RHTest {
 		rh.contrata(new Gerente(0, "Maria", 10.00));
 		rh.contrata(new Gerente(0, "João", 25.25));
 		rh.contrata(new Gerente(0, "Mariana", 50.50));
-		assertEquals(85.75, rh.calculaMedia(), DELTA);
+		assertEquals(28.58333333, rh.calculaMedia(), DELTA);
 	}
 
 	@Test
@@ -43,7 +43,7 @@ public class RHTest {
 		DiretorDeVendas diretor = new DiretorDeVendas(0, "Mariana", 50.50);
 		diretor.incrementaFaturamento(75.00);
 		rh.contrata(diretor);
-		assertEquals(179.00, rh.calculaMedia(), DELTA);
+		assertEquals(59.666666, rh.calculaMedia(), DELTA);
 	}
 
 	@Test
@@ -52,6 +52,6 @@ public class RHTest {
 		rh.contrata(new Gerente(0, "João", 25.25));
 		rh.contrata(new DiretorDeMarketing(0, "Mariana", 50.50));
 		rh.contrata(new DiretorDeVendas(0, "José", 75.00));
-		assertEquals(286.25, rh.calculaMedia(), DELTA);
+		assertEquals(71.5625, rh.calculaMedia(), DELTA);
 	}
 }
