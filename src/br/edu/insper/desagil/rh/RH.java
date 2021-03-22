@@ -22,6 +22,6 @@ public class RH {
 		for (Funcionario funcionario: this.folha) {
 			s += funcionario.getSalario();
 		}
-		return s;
+		return s / this.folha.size();
 	}
 }
